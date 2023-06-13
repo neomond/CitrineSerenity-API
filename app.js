@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const categoriesRouter = require("./routes/categoriesRoutes");
-const activityLevelRoutes = require("./routes/activityLevelRoutes");
 
 const Category = require("./models/category").Category;
 const { categoriesData } = require("./data/categoryData");

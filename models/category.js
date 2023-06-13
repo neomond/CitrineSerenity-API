@@ -10,6 +10,14 @@ const categorySchema = new mongoose.Schema({
       image: String,
     },
   ],
+  likedItems: [
+    {
+      key: String,
+      title: String,
+      duration: String,
+      image: String,
+    },
+  ],
 });
 
 const Category = mongoose.model("Category", categorySchema);
