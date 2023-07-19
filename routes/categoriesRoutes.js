@@ -32,6 +32,7 @@ router.post("", async (req, res) => {
   console.log("geldium,", req.body);
   const category = new Category({
     name: req.body.name,
+    description: req.body.description,
   });
   const newcat = await category.save();
   console.log("ge", newcat);

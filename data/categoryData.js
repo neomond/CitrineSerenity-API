@@ -72,3 +72,13 @@
 // https://img.freepik.com/premium-photo/poster-rock-climb-called-blue-mountain_900958-1656.jpg
 // https://img.freepik.com/premium-photo/abstract-creative-background-using-your-project-ui-ux-design_155807-1066.jpg
 // https://img.freepik.com/premium-photo/colorful-abstract-background-with-pink-swirl_896360-3366.jpg
+
+// "imageUrl":"https://images.healthshots.com/healthshots/en/uploads/2021/12/18081913/bhujangasana-1600x900.jpg",
+// "categories":["64b7787cbeee1bb4567278c4"]
+
+// {
+//     "title":"Morning meditation",
+//     "duration":"10:00",
+//     "imageUrl":"https://img.freepik.com/premium-photo/abstract-creative-background-using-your-project-ui-ux-design_155807-1066.jpg",
+//     "categories":["64b7922d710df6c4270f5407"]
+//   }
