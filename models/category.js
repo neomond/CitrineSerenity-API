@@ -1,21 +1,12 @@
 const mongoose = require("mongoose");
 
 const categorySchema = new mongoose.Schema({
-  category: String,
-  data: [
+  name: String,
+  description: String,
+  sessions: [
     {
-      key: String,
-      title: String,
-      duration: String,
-      image: String,
-    },
-  ],
-  likedItems: [
-    {
-      key: String,
-      title: String,
-      duration: String,
-      image: String,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Session",
     },
   ],
 });
