@@ -28,6 +28,7 @@ router.get("/:id", (req, res) => {
       res.status(500).json(err);
     });
 });
+
 router.post("", async (req, res) => {
   console.log("geldium,", req.body);
   const category = new Category({
