@@ -18,7 +18,13 @@ const loginValidationRules = [
     .withMessage("Password must be at least 6 characters long"),
 ];
 
+const otpValidationRules = [
+  body("email").isEmail().withMessage("Invalid email address"),
+];
+
 router.post("/signup", signupValidationRules, validate, authController.signup);
 router.post("/login", loginValidationRules, validate, authController.login);
+router.post("/send-otp", otpValidationRules, validate, authController.sendOTP);
+router.post("/confirm-reset-password", authController.confirmAndResetPassword);
 
 module.exports = router;

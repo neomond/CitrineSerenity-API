@@ -6,11 +6,20 @@ const { Session } = require("../models/session");
 
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
-  console.log("id", id);
+  // console.log("id", id);
   const sessions = await Session.find({
     categories: { $in: [id] }, // Use the $in operator to find sessions with the given categoryId in the categories array.
   }).populate("categories");
+  res.json(sessions);
+});
 
+router.get("/", async (req, res) => {
+  // console.log("id", id);
+
+  const sessions = await Session
+    .find // Use the $in operator to find sessions with the given categoryId in the categories array.
+    ()
+    .populate("categories");
   res.json(sessions);
 });
 
