@@ -87,13 +87,13 @@ exports.sendOTP = async (req, res) => {
       const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "nazrinta@code.edu.az",
-          pass: "xuctvpwnzetvazrd",
+          user: process.env.SENDER,
+          pass: process.env.USER_PASS,
         },
       });
 
       const mailOptions = {
-        from: "nazrinta@code.edu.az",
+        from: process.env.SENDER,
         to: email,
         subject: "Password Reset OTP",
         text: `Your OTP code is: ${otp}`,
