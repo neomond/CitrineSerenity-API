@@ -14,6 +14,9 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "ActivityLevel",
   },
+  otp: {
+    type: String,
+  },
 });
 
 const User = mongoose.model("User", userSchema);

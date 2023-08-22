@@ -130,9 +130,11 @@ exports.confirmAndResetPassword = async (req, res) => {
         .json({ error: "User not found or OTP is invalid" });
     }
 
+    // const saltRounds = 10;
+    // const salt = await bcrypt.genSalt(saltRounds);
+    // const hashedPassword = await bcrypt.hash(newPassword, salt);
     const saltRounds = 10;
-    const salt = await bcrypt.genSalt(saltRounds);
-    const hashedPassword = await bcrypt.hash(newPassword, salt);
+    const hashedPassword = await bcrypt.hash(newPassword, saltRounds);
 
     user.password = hashedPassword;
     user.otp = null;
@@ -145,25 +147,3 @@ exports.confirmAndResetPassword = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
-
-// const transporter = nodemailer.createTransport({
-//   service: "gmail",
-//   auth: {
-//     // type: "login",
-//     // user: process.env.SENDER,
-//     // pass: process.env.USER_PASS,
-//     user: "nazrinta@code.edu.az",
-//     // pass: "ijckmyvkssclccmj",
-//     pass: "xuctvpwnzetvazrd",
-//   },
-//   debug: true,
-// });
-
-// const mailOptions = {
-//   // from: process.env.SENDER,
-//   // to: process.env.RECEIVER,
-//   from: "nazrinta@code.edu.az",
-//   to: email,
-//   subject: "Password Reset OTP",
-//   text: `Your OTP code is: ${otp}`,
-// };
