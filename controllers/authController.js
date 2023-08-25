@@ -130,9 +130,6 @@ exports.confirmAndResetPassword = async (req, res) => {
         .json({ error: "User not found or OTP is invalid" });
     }
 
-    // const saltRounds = 10;
-    // const salt = await bcrypt.genSalt(saltRounds);
-    // const hashedPassword = await bcrypt.hash(newPassword, salt);
     const saltRounds = 10;
     const hashedPassword = await bcrypt.hash(newPassword, saltRounds);
 
@@ -147,3 +144,7 @@ exports.confirmAndResetPassword = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+
+// const saltRounds = 10;
+// const salt = await bcrypt.genSalt(saltRounds);
+// const hashedPassword = await bcrypt.hash(newPassword, salt);

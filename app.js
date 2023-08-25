@@ -4,6 +4,7 @@ require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const categoriesRouter = require("./routes/categoriesRoutes");
 const sessionRouter = require("./routes/sessionsRoutes");
+const onboardingRouter = require("./routes/onboardingRoutes");
 
 const Category = require("./models/category").Category;
 const { categoriesData } = require("./data/categoryData");
@@ -29,6 +30,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 app.use("/api/auth", authRoutes);
 app.use("/api/categories", categoriesRouter);
 app.use("/api/sessions", sessionRouter);
+app.use("/api/onboarding", onboardingRouter);
 
 app.listen(8080, () => {
   console.log("Server started on port 8080");
