@@ -5,7 +5,7 @@ const authRoutes = require("./routes/authRoutes");
 const categoriesRouter = require("./routes/categoriesRoutes");
 const sessionRouter = require("./routes/sessionsRoutes");
 const onboardingRouter = require("./routes/onboardingRoutes");
-
+const meditationsRouter = require("./routes/meditationRoutes");
 const Category = require("./models/category").Category;
 const { categoriesData } = require("./data/categoryData");
 
@@ -31,6 +31,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/categories", categoriesRouter);
 app.use("/api/sessions", sessionRouter);
 app.use("/api/onboarding", onboardingRouter);
+app.use("/api/meditations", meditationsRouter);
 
 app.listen(8080, () => {
   console.log("Server started on port 8080");
