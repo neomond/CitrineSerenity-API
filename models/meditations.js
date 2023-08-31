@@ -2,14 +2,16 @@ const mongoose = require("mongoose");
 
 const meditationSchema = new mongoose.Schema({
   title: String,
-  subtitle: String,
   type: String,
+  subtitle: String,
   description: String,
   imgUrl: String,
-  categories: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Category",
-  },
+  relatedSessions: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "MeditationSession",
+    },
+  ],
 });
 
 const Meditation = mongoose.model("Meditation", meditationSchema);
