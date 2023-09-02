@@ -96,3 +96,4 @@
 //https://a.1stdibscdn.com/a_11061/a_52671121573451765607/ORL_13703_Mind_and_Spirit_1_master.jpg?width=768
 //https://st4.depositphotos.com/18803028/29702/i/450/depositphotos_297023848-stock-photo-abstract-background-space-text.jpg
 //https://www.hdwallpapers.in/download/blue_creature_fractal_pattern_abstraction_4k_hd_abstract-HD.jpg
+//https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/eutheism-abstract-spiritual-art-photography-modern-art-prints.jpg
