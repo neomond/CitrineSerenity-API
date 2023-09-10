@@ -7,9 +7,11 @@ const sessionRouter = require("./routes/sessionsRoutes");
 const onboardingRouter = require("./routes/onboardingRoutes");
 const meditationsRouter = require("./routes/meditationRoutes");
 const meditationsSessionsRouter = require("./routes/meditationsSessionRoutes");
+const yogaRouter = require("./routes/yogaRoutes");
 
 const Category = require("./models/category").Category;
 const { categoriesData } = require("./data/categoryData");
+
 const Grid = require("gridfs-stream");
 
 const app = express();
@@ -37,6 +39,7 @@ conn.once("open", () => {
   app.use("/api/onboarding", onboardingRouter);
   app.use("/api/meditations", meditationsRouter);
   app.use("/api/meditation-sessions", meditationsSessionsRouter);
+  app.use("/api/yoga", yogaRouter);
 
   // Include the MP3 file upload route
 

@@ -37,4 +37,20 @@ router.post("/", async (req, res) => {
   res.json(newsession);
 });
 
+// Backend route to fetch sessions by type
+router.get("/", async (req, res) => {
+  const { type } = req.query;
+  try {
+    let sessions;
+    if (type) {
+      sessions = await Session.find({ type: type.toLowerCase() });
+    } else {
+      sessions = await Session.find();
+    }
+    res.json(sessions);
+  } catch (error) {
+    res.status(500).json({ message: "An error occurred", error });
+  }
+});
+
 module.exports = router;

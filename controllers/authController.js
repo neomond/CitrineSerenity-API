@@ -1,10 +1,10 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const secretKey = "neomond";
-const { User } = require("../models/User");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 const { validationResult } = require("express-validator");
+const { User } = require("../models/user");
 
 function generateOTP(length) {
   const digits = "0123456789";
@@ -36,6 +36,7 @@ exports.signup = async (req, res, next) => {
     res.status(201).json({ message: "User created successfully" });
     next();
   } catch (error) {
+    console.error("Error in signup route:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 };
