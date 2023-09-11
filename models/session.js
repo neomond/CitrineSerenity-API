@@ -10,6 +10,8 @@ const sessionScheme = new mongoose.Schema({
   ],
   duration: String,
   imageUrl: String,
+  description: String,
+  youtube_id: String,
 });
 
 const Session = mongoose.model("Session", sessionScheme);
