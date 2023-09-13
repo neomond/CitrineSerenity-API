@@ -10,6 +10,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  otp: {
+    type: String,
+  },
   name: {
     type: String,
     // required: true,
@@ -27,9 +30,7 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "ActivityLevel",
   },
-  otp: {
-    type: String,
-  },
+
   description: {
     type: String,
   },

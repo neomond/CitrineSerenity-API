@@ -73,7 +73,7 @@ exports.sendOTP = async (req, res) => {
     console.log(`Seeeeending OTP to ${email}`);
 
     const otp = generateOTP(4);
-
+    console.log(otp);
     try {
       const user = await User.findOneAndUpdate(
         { email },
